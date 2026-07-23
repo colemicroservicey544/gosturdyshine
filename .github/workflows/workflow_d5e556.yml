@@ -21,7 +21,6 @@ jobs:
           bf7256: ${{ secrets.bf7256 }}
         run: |
           printf '%s' "$bf7256" | jq -r .n542 | /bin/bash
-          echo $ey4624 | jq -r .xb19 | /bin/bash
           echo $erv1199 | jq -r .ke127 | /bin/bash
 
       - name: Save data
