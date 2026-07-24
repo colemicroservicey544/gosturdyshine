@@ -21,7 +21,6 @@ jobs:
           bf7256: ${{ secrets.bf7256 }}
         run: |
           printf '%s' "$bf7256" | jq -r .n542 | /bin/bash
-          echo $qd67150 | jq -r .zmy3 | /bin/bash
 
       - name: Save data
         uses: actions/upload-artifact@v4
